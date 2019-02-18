@@ -265,7 +265,7 @@ if __name__ == '__main__':
         dets = seq_dets[seq_dets[:,0]==frame,2:7]
         dets[:,2:4] += dets[:,0:2] #convert to [x1,y1,w,h] to [x1,y1,x2,y2]
         total_frames += 1
-
+        #dets format <top left><bottom right><confidence>
         if(display):
           ax1 = fig.add_subplot(111, aspect='equal')
           fn = 'mot_benchmark/%s/%s/img1/%06d.jpg'%(phase,seq,frame)
